@@ -9,5 +9,7 @@ export default createGlobalStyle`
 
     html, body {
         font-size: calc(60% + .8vmin);
+        transition: all 1s ease;
+        background: ${props => props.theme.colors.main};
     }
 `;
