@@ -1,8 +1,8 @@
 import { createContext, ReactNode } from "react";
 import { DefaultTheme } from "styled-components";
 import usePersistedState from "../../Hooks/usePersistedState";
-import dark from "../../Styles/theme/dark";
-import light from "../../Styles/theme/light";
+import { dark } from "../../Styles/theme/dark";
+import { light } from "../../Styles/theme/light";
 
 interface Props {
     theme: DefaultTheme;

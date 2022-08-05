@@ -11,5 +11,9 @@ export default createGlobalStyle`
         font-size: calc(60% + .8vmin);
         transition: all 1s ease;
         background: ${props => props.theme.colors.main};
+        font-family: Arial, Helvetica, sans-serif;
+    
+
     }
+    
 `;

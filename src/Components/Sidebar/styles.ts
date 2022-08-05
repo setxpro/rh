@@ -1,16 +1,22 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div<{wrap: boolean}>`
     height: 100vh;
     width: 200px;
+    overflow: hidden;
     
     transition: all 1s ease;
-    border: 1px solid ${props => props.theme.colors.borders};
+    border-right: 1px solid ${props => props.theme.colors.borders};
     border-top: 0;
     border-bottom: 0;
     border-left: 0;
 
     background: ${props => props.theme.colors.sidebar};
+
+    @media (max-width: 800px) {
+        width: ${props => props.wrap ? '200px' : '0px'};
+        border-right: 1px solid ${props => props.wrap ? props.theme.colors.borders : 'transparent'};
+    }
     
 `;
 

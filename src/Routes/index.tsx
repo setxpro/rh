@@ -3,12 +3,13 @@ import { Route, Routes } from 'react-router-dom';
 import Template from '../Components/Template';
 import Home from '../Screens/Home';
 import Table from '../Screens/Tables';
+import SecurityRoutes from '../Security';
 
 const RoutesApp: React.FC = () => {
   return (
       <Routes>
-          <Route path='/' element={<Template><Home/></Template>}/>
-          <Route path='/table' element={<Template><Table/></Template>}/>
+          <Route path='/' element={<SecurityRoutes><Template><Home/></Template></SecurityRoutes>}/>
+          <Route path='/table' element={<SecurityRoutes><Template><Table/></Template></SecurityRoutes>}/>
       </Routes>
   );
 }
