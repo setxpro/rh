@@ -12,6 +12,9 @@ const Home: React.FC = () => {
           <Content>
             
           </Content>
+          <C.ContainerAuthors>
+            <p>© Copyright <a href="https://github.com/Zend-Team" target="_blank" rel="noreferrer">Zend Team</a> 2022</p>
+          </C.ContainerAuthors>
       </LayoutScreen>
   );
 }

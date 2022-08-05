@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 50px;
+    /* height: 600px; */
     margin-top: 5px;
     margin-bottom: 10px;
     transition: all 1s ease;
     border: 1px solid ${props => props.theme.colors.borders};
-    border-radius: 1rem;
-
-    background: red; //${props => props.theme.colors.content}
+    /* border-radius: 1rem; */
+    background: ${props => props.theme.colors.content};
 `;
 
 export const LayoutScreen = styled.div`

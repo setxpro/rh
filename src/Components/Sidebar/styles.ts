@@ -11,6 +11,11 @@ export const Container = styled.div<{wrap: boolean}>`
     border-bottom: 0;
     border-left: 0;
 
+    @media (max-width: 414px) {
+        position: absolute;
+        z-index: 999;
+    }
+
     background: ${props => props.theme.colors.sidebar};
 
     @media (max-width: 800px) {
