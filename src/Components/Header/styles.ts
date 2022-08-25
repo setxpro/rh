@@ -35,6 +35,7 @@ export const BarsMenu = styled(FaBars)`
     font-size: 1.2rem;
     color: ${props => props.theme.colors.text};
     animation: 1s rot linear both;
+    cursor: pointer;
     @keyframes rot {
         0% {
             transform: rotate(90deg);
@@ -45,7 +46,7 @@ export const CloseMenu = styled(MdClose)`
     font-size: 1.3rem;
     color: ${props => props.theme.colors.text};
     animation: 1s rot linear both;
-
+    cursor: pointer;
     @keyframes rot {
         0% {
             transform: rotate(90deg);
@@ -55,10 +56,12 @@ export const CloseMenu = styled(MdClose)`
 export const BellIcon = styled(AiOutlineBell)`
     font-size: 1.6rem;
     color: ${props => props.theme.colors.text};
+    cursor: pointer;
 `;
 export const Dark = styled(MdOutlineNightlight)`
     font-size: 1.6rem;
     color: ${props => props.theme.colors.text};
+    cursor: pointer;
 
     animation: 1s rot linear both;
 
@@ -71,7 +74,7 @@ export const Dark = styled(MdOutlineNightlight)`
 export const Light = styled(MdOutlineLightMode)`
     font-size: 1.6rem;
     color: ${props => props.theme.colors.text};
-
+    cursor: pointer;
     animation: 1s rot linear both;
 
     @keyframes rot {
@@ -172,6 +175,5 @@ export const ContentNameArea = styled.div`
     }
     h6 {
         font-size: 1em;
-        margin-left: 30px;
     }
 `;

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
+import { useAuth } from '../../Hooks/useAuth';
 import { useHeader } from '../../Hooks/useHeader';
 import { useTheme } from '../../Hooks/useTheme';
 
@@ -8,6 +9,7 @@ const Header: React.FC = () => {
 
   const { toggleTheme, theme } = useTheme();
   const { wrapperMenu, openMenuSidebar } = useHeader();
+  const auth = useAuth();
 
   const [isLogged, setIsLogged] = useState(true);
   const [notify, setNotify] = useState(1);
@@ -19,7 +21,7 @@ const Header: React.FC = () => {
             <C.ContentBtnMobile>
               {openMenuSidebar ? <C.CloseMenu  onClick={wrapperMenu}/> : <C.BarsMenu onClick={wrapperMenu}/>}
             </C.ContentBtnMobile>
-
+          <button onClick={auth.signout}>LOGOUT</button>
         </C.ContentLeft>
         <C.ContentRight>
 
@@ -35,11 +37,11 @@ const Header: React.FC = () => {
 
             <C.ContentAreaNameAndAvatar isLogged={isLogged}>
               <C.ContentNameArea>
-                <h4>Patrick Anjos</h4>
-                <h6>Developer</h6>
+                <h4>{auth.user?.fullname}</h4>
+                <h6>{auth.user?.habilidades[0]}</h6>
               </C.ContentNameArea>
               <div className='avatar'>
-                  <img src="https://github.com/setxpro.png" alt="avatar"/>
+                  <img src={`https://rhexpert-api.herokuapp.com/users/avatar/${auth.user?._id}`} alt="avatar"/>
               </div>
             </C.ContentAreaNameAndAvatar>
 
@@ -48,4 +50,4 @@ const Header: React.FC = () => {
   );
 }
 
-export default Header;
+export default memo(Header);

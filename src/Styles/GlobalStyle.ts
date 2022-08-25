@@ -12,8 +12,5 @@ export default createGlobalStyle`
         transition: all 1s ease;
         background: ${props => props.theme.colors.main};
         font-family: Arial, Helvetica, sans-serif;
-    
-
     }
-    
 `;

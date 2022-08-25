@@ -5,12 +5,12 @@ import { Title } from '../../Components/Page/Title';
 
 import * as C from './styles';
 
-const Table: React.FC = () => {
+const Atividades: React.FC = () => {
   return (
       <LayoutScreen>
-          <Title title="Tabelas"/>
+          <Title title="Atividades"/> 
           <Content>
-            
+            {/** Area Generic */}
           </Content>
           <C.ContainerAuthors>
             <p>© Copyright <a href="https://github.com/Zend-Team" target="_blank" rel="noreferrer">Zend Team</a> 2022</p>
@@ -19,4 +19,4 @@ const Table: React.FC = () => {
   );
 }
 
-export default Table;
+export default Atividades;

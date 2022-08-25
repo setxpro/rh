@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useState } from "react";
+import { useSidebar } from "../../Hooks/useSidebar";
 
 type PalletProps = {
     cHome: boolean;
@@ -13,6 +14,8 @@ export const PalletProvider = ( { children } : { children : ReactNode } ) => {
 
     const [cHome, setCHome] = useState(true);
     const [cTable, setCTable] = useState(false);
+    const { wrapperTable } = useSidebar()
+
 
     function getHome() {
         setCHome(true);
@@ -21,6 +24,7 @@ export const PalletProvider = ( { children } : { children : ReactNode } ) => {
     function getTable() {
         setCTable(true);
         setCHome(false);
+        wrapperTable();
     }
 
     return (

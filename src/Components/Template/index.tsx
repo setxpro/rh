@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { HeaderProvider } from '../../Contexts/Header/HeaderContext';
 import { PalletProvider } from '../../Contexts/Pallet/Pallet';
+import { SidebarProvider } from '../../Contexts/SidebarContext';
 import Header from '../Header';
 import { Layout } from '../Layout';
 import Sidebar from '../Sidebar';
@@ -11,9 +12,11 @@ const Template = ({children}:{children:ReactNode}) => {
   return (
       <Layout>
         <HeaderProvider>
-        <PalletProvider>
-          <Sidebar/>
-        </PalletProvider>
+        <SidebarProvider>
+          <PalletProvider>
+            <Sidebar/>
+          </PalletProvider>
+        </SidebarProvider>
           <C.Content>
             <Header/>
             {children}

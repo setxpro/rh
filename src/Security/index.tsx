@@ -1,9 +1,12 @@
+import { useAuth } from "../Hooks/useAuth";
+import LoginScreen from "../Screens/LoginScreen";
+
 const SecurityRoutes = ( { children } : { children : JSX.Element } ) => {
 
-    const auth = true;
+    const auth = useAuth();
 
-    if (!auth) {
-        return <h1>Formulário de login</h1>
+    if (!auth.user) {
+        return <LoginScreen/>
     }
     return children;
 }
